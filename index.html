@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="grid-container">
+        <div class="user-info">
+          <div class="info">
+            <img src="images/image-jeremy.png" alt="jeremy" title="Jeremy" />
+            <div>
+              <p class="sec-text">Report for</p>
+              <p class="name">Jeremy Robson</p>
+            </div>
+          </div>
+          <div class="options">
+            <button value="daily" name="daily">Daily</button>
+            <button value="weekly" name="weekly" class="selected">
+              Weekly
+            </button>
+            <button value="monthly" name="monthly">Monthly</button>
+          </div>
+        </div>
+
+        <div class="box work">
+          <div class="heading">
+            <h4>Work</h4>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div>
+            <p class="time"></p>
+            <p class="sec-text">last week -</p>
+          </div>
+        </div>
+
+        <div class="box play">
+          <div class="heading">
+            <h4>Play</h4>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div>
+            <p class="time"></p>
+            <p class="sec-text">last week -</p>
+          </div>
+        </div>
+        <div class="box study">
+          <div class="heading">
+            <h4>study</h4>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div>
+            <p class="time"></p>
+            <p class="sec-text">last week -</p>
+          </div>
+        </div>
+
+        <div class="box exercise">
+          <div class="heading">
+            <h4>exercise</h4>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div>
+            <p class="time"></p>
+            <p class="sec-text">last week -</p>
+          </div>
+        </div>
+
+        <div class="box social">
+          <div class="heading">
+            <h4>social</h4>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div>
+            <p class="time"></p>
+            <p class="sec-text">last week -</p>
+          </div>
+        </div>
+        <div class="box self-care">
+          <div class="heading">
+            <h4>self care</h4>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div>
+            <p class="time"></p>
+            <p class="sec-text">last week -</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container">
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://www.linkedin.com/in/mariem-ehab-1431301b3"
+          target="_blank"
+          >Mary.E</a
+        >.
+      </p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
