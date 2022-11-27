@@ -1,0 +1,223 @@
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+    outline: none
+
+body
+    background: $backgroundColor
+    font-family: $mainFont
+    color: #FFF
+    min-height: 100vh
+    font-size: 18px
+
+a
+    text-decoration: none
+    color: $desturatedBlue
+
+ul
+    list-style: none
+
+h2
+    text-transform: capitalize
+    font-weight: 400
+    font-size: 18px
+
+main
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 100vh
+
+.sec-text
+    color: $paleBlue
+    font-size: 14px
+    font-weight: lighter
+    text-transform: capitalize
+
+.container
+    width: 100%
+    max-width: 80%
+    margin: 0 auto
+    @media (max-width: 1000px)
+        max-width: 90%
+
+.grid-container
+    width: 100%
+    display: grid
+    grid-template-areas: "user work play study" "user exercise social self"
+    grid-template-rows: 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    gap: 2rem
+
+    @media (max-width: 800px)
+        display: flex
+        flex-direction: column
+        padding: 2rem 0
+
+    .user-info
+        grid-area: user
+
+    .work
+        grid-area: work
+        &::after
+            background-color: $workColor
+            background-image: url("../images/icon-work.svg")
+
+    .play
+        grid-area: play
+        &::after
+            background-color: $playColor
+            background-image: url("../images/icon-play.svg")
+
+    .study
+        grid-area: study
+        &::after
+            background-color: $studyColor
+            background-image: url("../images/icon-study.svg")
+
+    .exercise
+        grid-area: exercise
+        &::after
+            background-color: $exerciseColor
+            background-image: url("../images/icon-exercise.svg")
+            background-position-y: 0
+
+    .social
+        grid-area: social
+        &::after
+            background-color: $socialColor
+            background-image: url("../images/icon-social.svg")
+            background-position-y: -15px
+
+    .self-care
+        grid-area: self
+        &::after
+            background-color: $selfCareColor
+            background-image: url("../images/icon-self-care.svg")
+            background-size: 55px
+
+.box
+    background-color: $darkBlue
+    padding: 1.5rem
+    border-radius: 1rem
+    transition: all ease-in-out .15s
+    position: relative
+    margin-top: 40px
+    cursor: pointer
+
+    &:hover
+        background-color: $desturatedBlue
+
+    &::after
+        content: ""
+        height: 65px
+        background-repeat: no-repeat
+        background-size: 70px
+        background-position: top -7px right 20px
+        left: 0
+        right: 0
+        top: -40px
+        position: absolute
+        z-index: -1
+        border-radius: 1rem 1rem 0 0
+        width: 100%
+
+    .heading
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .fas
+            color: $paleBlue
+            font-size: 16px
+            cursor: pointer
+
+            &:hover
+                color: #FFF
+
+    .time
+        font-size: 50px
+        font-weight: lighter
+        padding-top: 1.5rem
+        padding-bottom: .5rem
+        @media (max-width: 500px)
+            font-size: 26px
+            padding-top: .5rem
+
+    div:last-of-type
+        @media (max-width: 500px)
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+.user-info
+    background-color: $darkBlue
+    border-radius: 1rem
+
+    .info
+        background-color: $blue
+        padding: 1.5rem
+        border-radius: 1rem
+
+        @media (max-width: 800px)
+            display: flex
+            align-items: center
+
+        img
+            width: 70px
+            border-radius: 50%
+            border: 2px solid #FFF
+            margin-bottom: 1.5rem
+            @media (max-width: 800px)
+                margin-bottom: 0
+                margin-right: 1rem
+
+        .name
+            font-size: 36px
+            font-weight: lighter
+            padding: .15rem 0 4rem
+
+            @media (max-width: 800px)
+                padding-bottom: 0
+
+            @media (max-width: 500px)
+                font-size: 26px
+
+    .options
+        padding: 1.5rem
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+        @media (max-width: 800px)
+            flex-direction: row
+            justify-content: space-between
+
+        button
+            font-size: inherit
+            font-family: inherit
+            font-weight: lighter
+            margin-bottom: 1rem
+            color: $paleBlue
+            transition: all ease-in-out .15s
+            cursor: pointer
+            background: none
+            border: none
+
+            @media (max-width: 800px)
+                margin-bottom: 0
+
+            &.selected
+                color: #FFF
+
+            &:hover
+                color: #FFF
+
+            &:last-of-type
+                margin-bottom: 0
+
+footer
+    text-align: center
+    color: $paleBlue
+    padding: 1rem 0
